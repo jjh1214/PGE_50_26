@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="pge_50_26">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.224592821269913 0.104149089205071 0.163817882199225"
+        rpy="0 0 0" />
+      <mass
+        value="0.132505005430538" />
+      <inertia
+        ixx="5.27024488550696E-05"
+        ixy="-3.60152863077114E-07"
+        ixz="5.63950348068954E-08"
+        iyy="4.9698144854463E-05"
+        iyz="2.6332316269211E-06"
+        izz="8.36485907244945E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pge_50_26_description/meshes/pge_50_26/base_link.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pge_50_26_description/meshes/pge_50_26/base_link.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="gripper_finger1_link">
+    <inertial>
+      <origin
+        xyz="0.0 0.0 0.0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00502921798949927" />
+      <inertia
+        ixx="2.08507114807991E-07"
+        ixy="-1.21104963361651E-07"
+        ixz="-5.28371841804721E-08"
+        iyy="8.39328345322441E-07"
+        iyz="-3.64291642453535E-08"
+        izz="9.30993579975775E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pge_50_26_description/meshes/pge_50_26/gripper_finger1_link.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pge_50_26_description/meshes/pge_50_26/gripper_finger1_link.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_finger1_joint"
+    type="prismatic">
+    <origin
+      xyz="0.075 0.0 0.9425"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="gripper_finger1_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="gripper_finger2_link">
+    <inertial>
+      <origin
+        xyz="-0.0261486313196047 -0.387023928868582 -2.30754663762136"
+        rpy="0 0 0" />
+      <mass
+        value="0.00502921848716598" />
+      <inertia
+        ixx="2.08507116995792E-07"
+        ixy="1.11565550770782E-07"
+        ixz="-7.0790635236094E-08"
+        iyy="8.52530812196361E-07"
+        iyz="4.86104704355685E-08"
+        izz="9.17791415622573E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pge_50_26_description/meshes/pge_50_26/gripper_finger2_link.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pge_50_26_description/meshes/pge_50_26/gripper_finger2_link.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_finger2_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.075 0.0 0.9425"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="gripper_finger2_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="-0.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
